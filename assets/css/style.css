@@ -1,0 +1,393 @@
+@charset "utf-8";
+
+/*--------------------------------------*/
+/*              Basic rules             */
+/*--------------------------------------*/
+
+:root {
+    --app-white: #fff;
+    --app-blue: #00549A;
+    --app-light-blue:#5490cd;
+    --app-dark-blue: #00FFFF;
+    --app-background-color: #001f3d;
+    --app-line-border-color: #ddd;
+    --app-gray: #f9f9f9;
+    --app-items-border-color: #000;
+    --app-detail-font-color: #555;
+    --app-detail-primary-font-color: #00549A;
+    --app-detail-button-hover-bg-color: #00549a;
+    --app-detail-button-bg-color: #003778;
+    --app-detail-button-font-color: #fff;
+    --app-footer-bg-color: #655f5f;
+    --app-footer-height: 70px;
+    --app-footer-socials-color: #001f3d;
+    --app-body-bg: #333333;
+    --app-product-border: #f5f5f5;
+}
+
+.container {
+    width: min(100% - 32px, 960px);
+    margin-inline: auto;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "poppins", sans-serif;
+    background-color: var(--app-footer-socials-color);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--app-white);
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*--------------------------------------*/
+/*                Header                */
+/*--------------------------------------*/
+
+header{
+    position: relative;
+    overflow: visible;
+    background-color: transparent;
+    align-items: center;
+    z-index: 1;
+
+    .sky-logo {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 40px;
+        line-height: 55px;
+        font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--app-white);
+        letter-spacing: 2px;
+        cursor: pointer;   
+    }
+
+    .menu a{
+        font-size: 17px;
+        font-weight: 500;
+        font-variant: tabular-nums;
+        color: var(--app-white);
+        cursor: pointer;
+    }
+
+    .menu a:hover {
+        color: var(--app-light-blue);
+        transition: all 0.25s ease-in-out;
+    }
+
+    nav {
+        align-items: center;
+        display: inline-block;
+        
+        .login {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 15px;
+            text-decoration: none;
+            font-variant: tabular-nums;
+            color: var(--app-white);
+            border: 1px solid var(--app-white);
+            border-radius: 25px;
+            padding: 8px 12px;
+        }
+
+        .login:hover {
+            color: var(--app-blue);
+            background-color: var(--app-white);
+            transition: all 0.25s ease-in-out;
+        }
+    }
+
+    /*--------------------------------------*/
+    /*           Dropdown menu              */
+    /*--------------------------------------*/
+
+    .dropdown {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+    }
+
+    .dropdown-btn {
+        background-color: transparent;
+        color: var(--app-white);
+        font-size: 25px;
+        border: none;
+        width: 40px;
+        height: 60px;
+        cursor: pointer;
+        padding: 0px;
+    }
+    
+    .dropdown-btn:hover{
+        color: var(--app-light-blue);
+        background-color: transparent;
+    }
+
+    .dropdown-btn i {
+        pointer-events: none; 
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--app-footer-socials-color);
+        min-width: 160px;
+        z-index: 2;
+        border-radius: 5px;
+        left: -120px;
+    }
+
+    .dropdown-content a {
+        color: var(--app-white);
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;   
+    }
+
+    .dropdown-content a:hover {
+        color: var(--app-light-blue);
+    }
+    
+    .show {
+        display: block;
+    }
+}
+
+/*--------------------------------------*/
+/*                Modal                 */
+/*--------------------------------------*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.modal-content {
+    background-color: var(--app-white);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+    h2 {
+        margin-bottom: 25px;
+        color: var(--app-background-color);
+    }    
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: var(--app-blue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    display: block;
+    margin: 20px auto; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    background-color: var(--app-background-color);
+    color: var(--app-detail-button-font-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.login-btn:hover, button:hover {
+    background-color: var(--app-detail-button-hover-bg-color);
+    transform: scale(1.05);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid var(--app-line-border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--app-detail-primary-font-color);
+}
+
+.create-account {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--app-detail-primary-font-color);
+    text-align: center;
+    text-decoration: none;
+}
+
+.create-account:hover {
+    color: var(--app-light-blue);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    text-align: center;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: var(--app-detail-primary-font-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+
+/*--------------------------------------*/
+/*                Footer                */
+/*--------------------------------------*/
+
+footer {
+    background-color: var(--app-footer-socials-color);
+    height: var(--app-footer-height);
+    font-size: 16px;
+    color: var(--app-gray);
+
+    ul {
+        display: flex;
+
+        li {
+            line-height: var(--app-footer-height);
+            padding: 0 15px;
+        }
+    }
+
+    p {
+        line-height: var(--app-footer-height);
+    }
+}
+
+.fa-brands {
+    color: var(--app-gray);
+    font-size: 20px;
+}
+
+/*--------------------------------------*/
+/*          Common Media Query          */
+/*--------------------------------------*/
+
+@media screen and (min-width: 922px) {
+    div .dropdown {
+        display: none;
+    }
+
+    div .menu {
+        display: flex;
+        gap: 20px; 
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 921px) {
+    div .menu { 
+        display: none;
+    }
+
+    div .dropdown { 
+        display: inline-block;
+    }
+
+    nav {
+        margin-right: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    footer .container {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .socials ul {
+        display: flex;
+        justify-content: center; 
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .socials ul li {
+        margin: 0 10px;
+    }
+
+    .copyright {
+        display: none; 
+        margin-top: 15px;
+    }
+}
+
