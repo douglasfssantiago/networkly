@@ -19,6 +19,7 @@
     --app-detail-button-bg-color: #003778;
     --app-detail-button-font-color: #fff;
     --app-footer-bg-color: #655f5f;
+    --app-header-height: 70px;
     --app-footer-height: 70px;
     --app-footer-socials-color: #001f3d;
     --app-body-bg: #333333;
@@ -72,63 +73,52 @@ a {
 /*--------------------------------------*/
 
 header {
-    position: relative;
-    overflow: visible;
-    background-color: transparent;
-    align-items: center;
-    z-index: 1;
+    background-color: var(--app-gray);
+    height: var(--app-header-height);
+    color: var(--app-body-bg);
+    font-size: 16px;
+    font-weight: 400;
 
-    .sky-logo {
-        height: 60px;
-    }
+    .logo-search {
+        gap: 10px;
 
-    .logo {
-        font-size: 40px;
-        line-height: 55px;
-        font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--app-white);
-        letter-spacing: 2px;
-        cursor: pointer;   
-    }
+        input[type=text] {
+            width: 200px;
+            height: 50px;
+            padding: 0 15px 0 40px;
+            font-size: 16px;
+            color: var(--app-detail-font-color);
+            background: rgb(0 0 0 / 5%) url(../img/search.png) no-repeat 15px 15px;
+            background-size: 16px;
+            border: 1px solid rgb(0 0 0 / 5%);
+            box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+            transition: all 0.25s ease-in-out;
+        }
 
-    .menu a{
-        font-size: 17px;
-        font-weight: 500;
-        font-variant: tabular-nums;
-        color: var(--app-white);
-        cursor: pointer;
-    }
-
-    .menu a:hover {
-        color: var(--app-light-blue);
-        transition: all 0.25s ease-in-out;
+        input[type=text]:hover {
+            border: 1px solid rgb(0 0 0 / 50%)
+        }
     }
 
     nav {
-        align-items: center;
-        display: inline-block;
-        
-        .login {
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 15px;
-            text-decoration: none;
-            font-variant: tabular-nums;
-            color: var(--app-white);
-            border: 1px solid var(--app-white);
-            border-radius: 25px;
-            padding: 8px 12px;
-        }
+        ul {
+            list-style: none;
+            gap: 20px;
 
-        .login:hover {
-            color: var(--app-blue);
-            background-color: var(--app-white);
-            transition: all 0.25s ease-in-out;
+            li {
+                line-height: var(--app-header-height);
+            }
         }
     }
+}
+
+.logo {
+    place-items: center;
+
+    img {
+        height: 60px;
+    }
+}
 
     /*--------------------------------------*/
     /*           Dropdown menu              */
