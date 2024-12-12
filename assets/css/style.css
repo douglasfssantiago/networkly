@@ -107,8 +107,23 @@ header {
 
             li {
                 line-height: var(--app-header-height);
+                color: var(--app-body-bg);
+
+                a {
+                    color: var(--app-body-bg);
+                }
+
+                a:hover {
+                    color: var(--app-detail-button-hover-bg-color);
+                }
             }
         }
+    }
+}
+
+p.nav-item {
+    i {
+        padding-right: 3px;
     }
 }
 
