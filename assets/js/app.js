@@ -1,19 +1,20 @@
 'use strict';
 
-import { select, getElement, listen } from "./utils.js";
+import { select, selectById, listen } from "./utils.js";
 
+listen('load', window, () => { 
+    if (!localStorage.getItem('username') && !localStorage.getItem('password')) {
+        localStorage.setItem('username', 'johnsmith');
+        localStorage.setItem('password', '123456');
+    }
+});
 
-if (!localStorage.getItem('username') && !localStorage.getItem('password')) {
-    localStorage.setItem('username', 'johnsmith');
-    localStorage.setItem('password', '123456');
-}
+const loginBtn = select('.login-btn');
+const errorMessage = selectById('error-message');
 
-const loginBtn = document.querySelector('.login-btn');
-const errorMessage = document.getElementById('error-message');
-
-loginBtn.addEventListener('click', () => {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+function handleLogin() {
+    const username = selectById('username').value;
+    const password = selectById('password').value;
 
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
@@ -24,5 +25,12 @@ loginBtn.addEventListener('click', () => {
         errorMessage.textContent = 'Incorrect username or password';
         errorMessage.style.visibility = 'visible';
     }
-});
+}
 
+listen('click', loginBtn, handleLogin);
+
+listen('keydown', window, (event) => {
+    if (event.key === 'Enter') {
+        handleLogin();
+    }
+});
