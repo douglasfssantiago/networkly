@@ -1,9 +1,9 @@
-# Global Shipping
+# Networkly
 
-This project was developed for Program Developer students, focusing on tools like Git and GitHub while working remotely. This web application was designed for a fictional delivery company called 'Global Shipping', and includes features such as a geolocalization (Geolocation and MapBox APIs), modal dialogs, and responsive design. Below are the details of the project's structure and functionality.
+This project was developed for Program Developer students, focusing on tools like Git and GitHub while working remotely. This web application was designed for a fictional platform similar to LinkedIn called 'Networkly', and includes features such as fetching data (APIs) and  local storage data. Below are the details of the project's structure and functionality.
 
 ## 🔗Project Demo
-You can see the live demo of the project [here](https://douglasfssantiago.github.io/global-shipping/).
+You can see the live demo of the project [here](https://douglasfssantiago.github.io/networkly/).
 
 ![](./assets/img/readme2.png)
 
@@ -22,11 +22,11 @@ You can see the live demo of the project [here](https://douglasfssantiago.github
 To run this project locally, follow these steps:
 1. Clone the repository:
     ```sh
-    git clone https://github.com/douglasfssantiago/global-shipping.git
+    git clone https://github.com/douglasfssantiago/networkly.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd global-shipping
+    cd networkly
     ```
 3. Open `index.html` in your browser to view the application.
 
@@ -37,40 +37,36 @@ To run this project locally, follow these steps:
 │   │   └── style.css
 │   ├── img
 │   │   ├── favicon.png
-│   │   ├── hero-banner-img.png
-│   │   ├── banner.jpg
-│   │   └── download-app-img.png
+│   │   ├── login.jpg
+│   │   ├── logo.png
+│   │   ├── search.png
+│   │   ├── por-borrar.jpg
+│   │   ├── por-borrar2.jpg
+│   │   └── profile.jpg
 │   ├── js
 │   │   ├── app.js
-│   │   └── map.js
+│   │   └── utils.js
 ├── index.html
+├── home.html
 └── README.md
 
 
 ![](./assets/img/readme.png)
 
 ## 💡Features
-### Header
-- Logo and navigation menu.
-- Dropdown menu for additional links.
 
-### Banner 
-- Prominent hero banner to showcase key promotions or announcements.
-- Visually engaging with space for images and text.
+### User Authentication:
+- Login functionality that verifies user credentials stored in localStorage.
+- Error messaging for incorrect username or password attempts.
 
-### Modal Dialog
-- Log in/Register modal for user authentication.
-- Form validation and submission.
+### Responsive Design:
+- Adapts to different screen sizes and devices.
 
-### Services
-- Showcases the services provided by the company.
+### Profile Management:
+- Allows the user to manually add picture and data to the feed.
+- Displays profiles of at least 10 other users fetched from the Random User API, showcasing their profile pictures, full names, and cities.
 
-### Contact Us
-- Contact form for users to send messages.
-- Input fields for name, email, and message, with validation.
-
-### Footer
-- Social media links.
-- Company information.
+### Customizable Styling:
+- Consistent use of colors, fonts, and design elements to maintain a professional and cohesive look throughout the application.
 
 &copy; Created by MITT Software Students.
