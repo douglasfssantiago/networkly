@@ -560,7 +560,6 @@ aside {
         background-color: var(--app-white);
     
         .details {
-            /*background-color: var(--app-white);*/
             padding: 25px 25px 35px 25px;
             width: 100%;
             gap: 10px;
@@ -589,6 +588,7 @@ aside {
 
                 a {
                     color: var(--app-gray-dark);
+                    font-size: 12px;
                 }
             }
         }
