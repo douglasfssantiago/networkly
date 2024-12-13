@@ -617,7 +617,7 @@ aside {
     
     .details {
         background-color: var(--app-white);
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         padding: 25px 25px 35px 25px;
         width: 100%;
         gap: 10px;
@@ -648,6 +648,25 @@ aside {
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
+        }
+    }
+
+    .user-stat {
+        background-color: var(--app-white);
+        font-size: 14px;
+
+        .col-01 {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .col-01:first-child {
+            border-right: 1px solid rgb(0 0 0 / 10%);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
         }
     }
 }
