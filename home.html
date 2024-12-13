@@ -17,7 +17,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
         <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="./assets/css/style.css" media="all"> 
-        <script src="./assets/js/app.js" type="module"></script>       
+        <script src="./assets/js/app.js" type="module"></script>
+		<script src="./assets/js/post.js" type="module"></script>
     </head>
     <body>
         <header>
@@ -144,41 +145,45 @@
                             Sound
                         </p>
                         <p class="col prepost-icon-share">
-                            <i class="fa-solid fa-share"></i></i>
+                            <i class="post-btn fa-solid fa-share"></i>
                         </p>
+                        <input type="file" id="fileInput" style="display: none">
                     </div>
+                    <div class="post-new">
+                    </div>                    
                     <div>
                         <div class="post grid">
                             <div class="post-head flex">
                                 <div class="col flex">
                                     <figure>
-                                        <img class="post-photo" src="./assets/img/por-borrar.jpg">
+                                        <img class="post-photo" src="./assets/img/andrea-parker.jpg">
                                     </figure>
                                     <div class="post-identity">
-                                        <p class="post-name">Nombre</p>
-                                        <p>cargo</p>
+                                        <p class="post-name">Andrea Parker</p>
+                                        <p class="post-second">Recruiter</p>
                                     </div>
                                     <div class="post-options">
                                         <i class="post-ellipsis fa-solid fa-ellipsis"></i>
-                                        <p>10m ago</p>
+                                        <p class="post-second">10m ago</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="post-text flex">
                                 <p class="message">
                                     Hi community.
-                                    I am looking for Java Full Stack and Test Automation (Java/JavaScript) Engineers in United States. Ask Me in DM about details.
+                                    I am looking for Java Full Stack and Test Automation (Java/JavaScript) 
+                                    Engineers in United States. Ask Me in DM about details. I write you from Spain.
                                 </p>
                             </div> 
                             <div class="post-image flex">
                                 <figure>
-                                    <img src="./assets/img/por-borrar2.jpg">
+                                    <img src="./assets/img/madrid.jpg">
                                 </figure>
                             </div>
                             <div class="post-likes flex">
-                                <i class="heart fa-solid fa-heart"></i>&nbsp;&nbsp;<label>36</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                                <i class="comment fa-regular fa-comment"></i>&nbsp;&nbsp;<label>36</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                                <i class="share fa-solid fa-share-nodes"></i>&nbsp;&nbsp;<label>36</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="heart fa-solid fa-heart"></i><label>36</label>
+                                <i class="comment fa-regular fa-comment"></i><label>36</label>
+                                <i class="share fa-solid fa-share-nodes"></i><label>36</label>
                             </div>                                                            
                         </div>                              
                     </div>
@@ -229,4 +234,4 @@
             </section>
         </footer>     
     </body>
-</htm>
+</html>

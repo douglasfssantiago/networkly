@@ -321,7 +321,7 @@ main section {
     margin-bottom: 40px;
     width: 100%;  
 
-    .prepost-up, .prepost-down, .post {
+    .prepost-up, .prepost-down, .post, .post-item {
         box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
         background-color: var(--app-white);
         padding: 30px;
@@ -358,7 +358,7 @@ main section {
         border-bottom-right-radius: 5px;
     }
 
-    .post {
+    .post, .post-item {
         margin-top: 25px;
         border-radius: 5px;
         width: 100%;
@@ -368,6 +368,7 @@ main section {
                 width: 100%;
                 height: 100px;
                 font-size: 20px;
+                cursor: pointer;
             }
         }
 
@@ -395,6 +396,8 @@ main section {
             }
 
             label {
+                padding-left: 10px;
+                padding-right: 20px;							   
                 font-size: 16px;
                 color: var(--app-gray-medium);
             }
@@ -441,6 +444,7 @@ main section {
 
 .prepost-icon {
     justify-content: left;
+	cursor: pointer;			
 }
 
 .prepost-icon-share {
@@ -485,6 +489,10 @@ main section {
     color: var(--app-gray-dark) !important;
 }
 
+.post-second {
+    font-size: 16px;
+}
+
 .post-options {
     width: 100px;  
     display: flex;
@@ -497,6 +505,19 @@ main section {
     color: var(--app-gray-medium);
     font-size: 24px;
 }
+
+.post-btn {
+    cursor: pointer;
+							
+}
+
+.post-new .post-item {
+    display: none;
+}
+/*-------------------------------------*/
+/*            Profile - left           */
+/*-------------------------------------*/
+
 
 .col-0 {
     flex: wrap;
@@ -548,6 +569,7 @@ aside {
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 16px;
+                color: var(--app-gray-medium);
             }
 
             p {
@@ -700,3 +722,75 @@ aside {
         margin-top: 15px;
     }
 }
+
+
+/*-------------------------------------*/
+/*         Connections - right         */
+/*-------------------------------------*/
+
+.network-heading {
+    text-align: center;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    
+    h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--app-gray-dark);
+    padding: 15px;
+    }
+}
+
+.picture-container {
+    img {
+        height: 80px;
+        border-radius: 50%;
+        border: 1px solid rgb(0 0 0 / 10%);
+    }
+
+    .network-picture {
+        margin: 15px;
+    }
+
+    .plus-icon {
+        border: 1px solid var(--app-blue-light);
+        border-radius: 50%;
+        font-size: 25px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding-top: 1px;
+        background-color: var(--app-gray);
+        margin: 35px 15px;
+        display: grid;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .plus-icon:hover {
+        transform: scale(1.05);
+    }
+
+    i {
+        color: var(--app-blue-light);
+        
+    }
+}
+
+.network-info {
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+    h3 {
+        color: var(--app-gray-dark);
+        font-size: 18px;
+        font-weight: 600;
+        padding: 0px 15px 5px 15px;
+    }
+
+    h2 {
+        color: var(--app-gray-medium);
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0px 15px 10px 15px;
+    }
+}
+
