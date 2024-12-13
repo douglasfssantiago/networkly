@@ -588,3 +588,18 @@ main section {
     color: var(--app-gray-medium);
     font-size: 24px;
 }
+
+.col-0 {
+    flex: wrap;
+}
+
+.col-1 {
+    flex: 0 0 auto;
+    width: calc(25% - 20px);
+}
+
+.col-2 {
+    flex: 0 0 auto;
+    width: calc(50% - 20px);
+}
+
