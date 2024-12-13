@@ -616,18 +616,19 @@ aside {
 .user-profile {
     .user-profile-container {
         box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+        border-radius: 5px;
+        background-color: var(--app-white);
     
         .details {
-            background-color: var(--app-white);
-            border-radius: 5px 5px 0 0;
+            /*background-color: var(--app-white);*/
             padding: 25px 25px 35px 25px;
             width: 100%;
             gap: 10px;
             border-bottom: 1px solid rgb(0 0 0 / 10%);
 
             img {
-                width: 100px;
-                height: 100px;
+                width: 150px;
+                height: 150px;
                 border-radius: 50%;
                 border: 1px solid rgb(0 0 0 / 10%);
             }
@@ -647,14 +648,13 @@ aside {
                 margin-top: 10px;
 
                 a {
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                    color: var(--app-gray-dark);
                 }
             }
         }
 
         .user-stat {
-            background-color: var(--app-white);
+            /*background-color: var(--app-white);*/
             font-size: 14px;
             border-bottom: 1px solid rgb(0 0 0 / 10%);
 
@@ -674,11 +674,10 @@ aside {
         }
 
         .exclusive {
-            background-color: var(--app-white);
+            /*background-color: var(--app-white);*/
             padding: 25px;
             font-size: 14px;
             gap: 15px;
-            border-radius: 0 0 5px 5px;
 
             p {
                 text-overflow: ellipsis;
