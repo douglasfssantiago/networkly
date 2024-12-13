@@ -7,11 +7,14 @@
 :root {
     --app-white: #fff;
     --app-blue: #00549A;
+    --app-blue-light: #0483eb;
     --app-light-blue:#5490cd;
     --app-dark-blue: #00FFFF;
-    --app-background-color: #001f3d;
+    --app-background-color: #f6f7f9;
     --app-line-border-color: #ddd;
     --app-gray: #f9f9f9;
+    --app-gray-medium: #808080;
+    --app-gray-dark: #2f2e2e;
     --app-items-border-color: #000;
     --app-detail-font-color: #555;
     --app-detail-primary-font-color: #00549A;
@@ -406,3 +409,173 @@ footer {
     transform: scale(1.05);
 }
 
+
+/*-------------------------------------*/
+/*                Main                 */
+/*-------------------------------------*/
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+main section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;  
+
+    .prepost-up, .prepost-down, .post {
+        box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+        background-color: var(--app-white);
+        padding: 30px;
+    }
+
+    .prepost-up, .prepost-down {
+        .col {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+        }
+    }
+
+    .prepost-up {
+        border-bottom: 2px solid var(--app-background-color);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        input {
+            width: 100%;
+            border: 0;
+            padding-left: 0;
+            padding-right: 0;
+            margin: 10px 0;
+            display: block;
+            border-radius: 5px;
+            box-sizing: border-box;            
+        }
+    }
+
+    .prepost-down {
+        border-top: 1px solid var(--app-background-color);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .post {
+        margin-top: 25px;
+        border-radius: 5px;
+        width: 100%;
+
+        .post-head {
+            .col {
+                width: 100%;
+                height: 100px;
+                font-size: 20px;
+            }
+        }
+
+        .post-text {
+            margin-top: 20px;
+            width: 100%;
+            
+            .message {
+                color: var(--app-gray-dark);
+                font-size: 20px;
+            }
+        }
+        
+        .post-image {
+            margin-top: 20px;
+            width: 100%;        
+        }      
+        
+        .post-likes {
+            margin-top: 15px;
+            width: 100%;
+
+            i {
+                font-size: 24px;
+            }
+
+            label {
+                font-size: 16px;
+                color: var(--app-gray-medium);
+            }
+            
+            .heart {
+                color: #ff0000;
+            }
+
+            .comment, .share {
+                color: var(--app-gray-medium);
+            }
+        }          
+    }
+}
+
+.prepost-icon, .prepost-icon-share {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--app-gray-medium);
+}
+
+.prepost-icon {
+    justify-content: left;
+}
+
+.prepost-icon-share {
+    color: var(--app-blue-light);
+    font-size: 22px;
+    justify-content: right;
+}
+
+.prepost-name {
+    width: calc(100% - 50px);
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: var(--app-gray-dark);
+}
+
+.post-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.post-identity, .post-options {
+    p {
+        color: var(--app-gray-medium);
+    }
+}
+
+.post-identity {
+    width: calc(100% - 200px);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.post-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--app-gray-dark) !important;
+}
+
+.post-options {
+    width: 100px;  
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.post-ellipsis {
+    color: var(--app-gray-medium);
+    font-size: 24px;
+}
