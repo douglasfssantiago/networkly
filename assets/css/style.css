@@ -554,6 +554,11 @@ main section {
     font-size: 24px;
 }
 
+/*-------------------------------------*/
+/*            Profile - left           */
+/*-------------------------------------*/
+
+
 .col-0 {
     flex: wrap;
     gap: 20px;
@@ -581,7 +586,6 @@ aside {
         background-color: var(--app-white);
     
         .details {
-            /*background-color: var(--app-white);*/
             padding: 35px 25px 25px;
             width: 100%;
             gap: 10px;
@@ -618,7 +622,6 @@ aside {
         }
 
         .user-stat {
-            /*background-color: var(--app-white);*/
             font-size: 14px;
             border-bottom: 1px solid rgb(0 0 0 / 10%);
 
@@ -638,7 +641,6 @@ aside {
         }
 
         .exclusive {
-            /*background-color: var(--app-white);*/
             padding: 25px 25px 35px;
             font-size: 14px;
             gap: 15px;
@@ -656,3 +658,74 @@ aside {
         }
     }
 }
+
+/*-------------------------------------*/
+/*         Connections - right         */
+/*-------------------------------------*/
+
+.network-heading {
+    text-align: center;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    
+    h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--app-gray-dark);
+    padding: 15px;
+    }
+}
+
+.picture-container {
+    img {
+        height: 80px;
+        border-radius: 50%;
+        border: 1px solid rgb(0 0 0 / 10%);
+    }
+
+    .network-picture {
+        margin: 15px;
+    }
+
+    .plus-icon {
+        border: 1px solid var(--app-blue-light);
+        border-radius: 50%;
+        font-size: 25px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding-top: 1px;
+        background-color: var(--app-gray);
+        margin: 35px 15px;
+        display: grid;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .plus-icon:hover {
+        transform: scale(1.05);
+    }
+
+    i {
+        color: var(--app-blue-light);
+        
+    }
+}
+
+.network-info {
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+    .network-name {
+        color: var(--app-gray-dark);
+        font-size: 18px;
+        font-weight: 400;
+        padding: 0px 15px 5px 15px;
+    }
+
+    .network-position {
+        color: var(--app-gray-medium);
+        font-size: 15px;
+        font-weight: 500;
+        padding: 0px 15px 10px 15px;
+    }
+}
+
