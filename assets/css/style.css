@@ -567,76 +567,53 @@ aside {
                 text-transform: uppercase;
             }
         }
-    }
-}
-
-/*-------------------------------------*/
-/*         Connections - right         */
-/*-------------------------------------*/
-
-.network-heading {
-    text-align: center;
-    border-bottom: 1px solid var(--app-gray-2);
-    
-    h2 {
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--app-gray-4);
-    padding: 15px;
-    }
-}
-
-.picture-container {
-    img {
-        height: 80px;
-        border-radius: 50%;
-        border: 1px solid var(--app-gray-2);
-    }
-
-    .network-picture {
-        margin: 15px;
-    }
-
-    .plus-icon {
-        border: 1px solid var(--app-blue-2);
-        border-radius: 50%;
-        font-size: 25px;
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        padding-top: 1px;
-        background-color: var(--app-gray-1);
-        margin: 35px 15px;
-        display: grid;
-        cursor: pointer;
-        transition: transform 0.2s ease, background-color 0.2s ease;
-    }
-
-    .plus-icon:hover {
-        transform: scale(1.05);
-    }
-
-    i {
-        color: var(--app-blue-2);
         
+        .heading {
+            padding: 35px 25px 25px;
+            border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+            h3 {
+                text-align: center;
+            }
+        }        
     }
 }
 
-.network-info {
-    border-bottom: 1px solid var(--app-gray-2);
+.user {
+    padding: 35px 25px 35px;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    gap: 10px;
 
-    h3 {
-        color: var(--app-gray-4);
-        font-size: 18px;
-        font-weight: 600;
-        padding: 0px 15px 5px 15px;
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
     }
 
-    h2 {
-        color: var(--app-gray-3);
-        font-size: 16px;
-        font-weight: 500;
-        padding: 0px 15px 10px 15px;
+    .name-title {
+        h3 {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 10px;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 10px;
+        }
+    }
+
+    .plus {
+        width: 30px;
+        height: 30px;
+        background-color: var(--app-gray-1);
+        border-radius: 50%;
+        margin-left: auto;
+
+        i {
+            color: var(--app-blue-1);
+        }
     }
 }
 
