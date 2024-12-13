@@ -2,24 +2,6 @@
 
 import { select, getElement, listen } from "./utils.js";
 
-const dropdownBtn = select('.dropdown-btn');
-const dropdownContent = select('.dropdown-content');
-
-dropdownBtn.addEventListener('click', function() {
-    dropdownContent.classList.toggle('show');
-});
-
-listen('click', window, (event) => {
-    if (!event.target.matches('.dropdown-btn')) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-            const openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-});
 
 if (!localStorage.getItem('username') && !localStorage.getItem('password')) {
     localStorage.setItem('username', 'johnsmith');
