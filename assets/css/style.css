@@ -228,7 +228,7 @@ p.nav-item {
 
 footer {
     background-color: var(--app-blue);
-    height: 50px;
+    height: var(--app-footer-height);
     font-size: 16px;
     color: var(--app-gray);
 
@@ -236,13 +236,13 @@ footer {
         display: flex;
 
         li {
-            line-height: 50px;
+            line-height: var(--app-footer-height);
             padding: 0 15px;
         }
     }
 
     p {
-      line-height: 50px;  
+      line-height: var(--app-footer-height);  
     }
 }
 
@@ -322,7 +322,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 120px);
+    height: calc(100svh - 70px - 70px);
     color: var(--app-items-border-color);
     background-color: var(--app-gray);
 }
@@ -621,7 +621,7 @@ aside {
     
         .details {
             /*background-color: var(--app-white);*/
-            padding: 25px 25px 35px 25px;
+            padding: 35px 25px 25px;
             width: 100%;
             gap: 10px;
             border-bottom: 1px solid rgb(0 0 0 / 10%);
@@ -636,12 +636,13 @@ aside {
             h2 {
                 font-size: 18px;
                 font-weight: 600;
+                line-height: 18px;
             }
 
             h3 {
                 font-size: 16px;
                 font-weight: 500;
-                text-overflow: ellipsis;
+                line-height: 16px;
             }
 
             p {
@@ -668,14 +669,14 @@ aside {
             }
 
             h3 {
-                font-size: 18px;
+                font-size: 24px;
                 font-weight: 600;
             }
         }
 
         .exclusive {
             /*background-color: var(--app-white);*/
-            padding: 25px;
+            padding: 25px 25px 35px;
             font-size: 14px;
             gap: 15px;
 
