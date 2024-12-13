@@ -220,8 +220,8 @@ p.nav-item {
 /*--------------------------------------*/
 
 footer {
-    background-color: var(--app-footer-socials-color);
-    height: var(--app-footer-height);
+    background-color: var(--app-blue);
+    height: 50px;
     font-size: 16px;
     color: var(--app-gray);
 
@@ -229,19 +229,24 @@ footer {
         display: flex;
 
         li {
-            line-height: var(--app-footer-height);
+            line-height: 50px;
             padding: 0 15px;
         }
     }
 
     p {
-        line-height: var(--app-footer-height);
+      line-height: 50px;  
     }
 }
 
-.fa-brands {
+.fa-brands, .fa-envelope {
     color: var(--app-gray);
     font-size: 20px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.fa-brands:hover, .fa-envelope:hover {
+    transform: scale(1.15);
 }
 
 /*--------------------------------------*/
@@ -310,7 +315,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 140px);
+    height: calc(100vh - 120px);
     color: var(--app-items-border-color);
     background-color: var(--app-gray);
 }
