@@ -59,6 +59,10 @@ main {
     display: grid;
 }
 
+.grid-center {
+    place-items: center;
+}
+
 .flex-between {
     justify-content: space-between;
 }
@@ -404,7 +408,7 @@ footer {
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
-.create-btn {
+.create-btn, .button {
     font-weight: 600;
     background-color: var(--app-white);
     color: var(--app-blue);
@@ -414,7 +418,7 @@ footer {
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
-.btn:hover {
+.btn:hover, .button:hover {
     transform: scale(1.05);
 }
 
@@ -587,4 +591,105 @@ main section {
 .post-ellipsis {
     color: var(--app-gray-medium);
     font-size: 24px;
+}
+
+.col-0 {
+    flex: wrap;
+    gap: 20px;
+}
+
+.col-1 {
+    flex: 0 0 auto;
+    width: calc(25% - 20px);
+}
+
+.col-2 {
+    flex: 0 0 auto;
+    width: calc(50% - 20px);
+}
+
+aside {
+    margin: 40px 0;
+    color: var(--app-gray-dark);
+}
+
+.user-profile {
+    .user-profile-container {
+        box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+    
+        .details {
+            background-color: var(--app-white);
+            border-radius: 5px 5px 0 0;
+            padding: 25px 25px 35px 25px;
+            width: 100%;
+            gap: 10px;
+            border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 1px solid rgb(0 0 0 / 10%);
+            }
+
+            h2 {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            h3 {
+                font-size: 16px;
+                font-weight: 500;
+                text-overflow: ellipsis;
+            }
+
+            p {
+                margin-top: 10px;
+
+                a {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .user-stat {
+            background-color: var(--app-white);
+            font-size: 14px;
+            border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+            .col-01 {
+                flex: 1;
+                padding: 25px;
+            }
+
+            .col-01:first-child {
+                border-right: 1px solid rgb(0 0 0 / 10%);
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        .exclusive {
+            background-color: var(--app-white);
+            padding: 25px;
+            font-size: 14px;
+            gap: 15px;
+            border-radius: 0 0 5px 5px;
+
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 100%;
+            }
+
+            button {
+                text-transform: uppercase;
+            }
+        }
+    }
 }
