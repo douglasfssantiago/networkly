@@ -59,6 +59,10 @@ main {
     display: grid;
 }
 
+.grid-center {
+    place-items: center;
+}
+
 .flex-between {
     justify-content: space-between;
 }
@@ -591,6 +595,7 @@ main section {
 
 .col-0 {
     flex: wrap;
+    gap: 20px;
 }
 
 .col-1 {
@@ -603,3 +608,46 @@ main section {
     width: calc(50% - 20px);
 }
 
+aside {
+    margin: 40px 0;
+    color: var(--app-gray-dark);
+}
+
+.user-profile {
+    
+    .details {
+        background-color: var(--app-white);
+        border-radius: 5px;
+        padding: 25px 25px 35px 25px;
+        width: 100%;
+        gap: 10px;
+        border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid rgb(0 0 0 / 10%);
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 500;
+            text-overflow: ellipsis;
+        }
+
+        p {
+            margin-top: 10px;
+
+            a {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}
