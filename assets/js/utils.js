@@ -16,3 +16,8 @@ export function listen(event, selector, callback) {
     return selector.addEventListener(event, callback);
 }
 
+export function create(element) {
+    return document.createElement(element);
+  }
+  
+
