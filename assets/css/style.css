@@ -632,6 +632,7 @@ aside {
 .user {
     padding: 35px 25px 35px;
     border-bottom: 1px solid rgb(0 0 0 / 10%);
+    gap: 10px;
 
     img {
         width: 40px;
@@ -641,7 +642,7 @@ aside {
 
     .name-title {
         h3 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 500;
             line-height: 10px;
         }
@@ -658,6 +659,7 @@ aside {
         height: 30px;
         background-color: var(--app-gray);
         border-radius: 50%;
+        margin-left: auto;
 
         i {
             color: var(--app-blue);
