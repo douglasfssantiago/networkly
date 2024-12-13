@@ -80,7 +80,7 @@ a {
 /*--------------------------------------*/
 
 header {
-    background-color: var(--app-gray);
+    background-color: var(--app-white);
     height: var(--app-header-height);
     color: var(--app-body-bg);
     font-size: 16px;
@@ -104,7 +104,7 @@ header {
         }
 
         input[type=text]:hover {
-            border: 1px solid rgb(0 0 0 / 50%);
+            border: 1px solid rgb(0 0 0 / 20%);
         }
     }
 
@@ -197,62 +197,6 @@ footer {
     transform: scale(1.15);
 }
 
-/*--------------------------------------*/
-/*          Common Media Query          */
-/*--------------------------------------*/
-
-@media screen and (min-width: 922px) {
-    div .dropdown {
-        display: none;
-    }
-
-    div .menu {
-        display: flex;
-        gap: 20px; 
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 921px) {
-    div .menu { 
-        display: none;
-    }
-
-    div .dropdown { 
-        display: inline-block;
-    }
-
-    nav {
-        margin-right: 20px;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    footer .container {
-        display: flex; 
-        flex-direction: column;
-        align-items: center; 
-        text-align: center; 
-    }
-
-    .socials ul {
-        display: flex;
-        justify-content: center; 
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-
-    .socials ul li {
-        margin: 0 10px;
-    }
-
-    .copyright {
-        display: none; 
-        margin-top: 15px;
-    }
-}
 
 /*--------------------------------------*/
 /*             Login page               */
@@ -616,14 +560,14 @@ aside {
             }
 
             h2 {
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: 600;
-                line-height: 18px;
+                line-height: 20px;
             }
 
             h3 {
                 font-size: 16px;
-                font-weight: 500;
+                font-weight: 400;
                 line-height: 16px;
                 color: var(--app-gray-medium);
             }
@@ -673,8 +617,112 @@ aside {
                 text-transform: uppercase;
             }
         }
+
+        .heading {
+            padding: 35px 25px 25px;
+            border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+            h3 {
+                text-align: center;
+            }
+        }
     }
 }
+
+.user {
+    padding: 35px 25px 35px;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .name-title {
+        h3 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 10px;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 10px;
+        }
+    }
+
+    .plus {
+        width: 30px;
+        height: 30px;
+        background-color: var(--app-gray);
+        border-radius: 50%;
+
+        i {
+            color: var(--app-blue);
+        }
+    }
+}
+
+
+/*--------------------------------------*/
+/*          Common Media Query          */
+/*--------------------------------------*/
+
+@media screen and (min-width: 922px) {
+    div .dropdown {
+        display: none;
+    }
+
+    div .menu {
+        display: flex;
+        gap: 20px; 
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 921px) {
+    div .menu { 
+        display: none;
+    }
+
+    div .dropdown { 
+        display: inline-block;
+    }
+
+    nav {
+        margin-right: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    footer .container {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .socials ul {
+        display: flex;
+        justify-content: center; 
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .socials ul li {
+        margin: 0 10px;
+    }
+
+    .copyright {
+        display: none; 
+        margin-top: 15px;
+    }
+}
+
 
 /*-------------------------------------*/
 /*         Connections - right         */
