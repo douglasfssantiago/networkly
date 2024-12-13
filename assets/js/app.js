@@ -71,7 +71,7 @@ function loadUser(user) {
         const title = create('h4');
         const plus = create('div');
 
-        userDiv.classList.add('user', 'flex', 'flex-between');
+        userDiv.classList.add('user', 'flex');
         img.src = user.picture.thumbnail;
         nameTitle.classList.add('name-title', 'grid');
         name.innerText = `${user.name.first} ${user.name.last}`;
