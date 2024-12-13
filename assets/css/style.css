@@ -625,6 +625,7 @@ aside {
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 16px;
+                color: var(--app-gray-medium);
             }
 
             p {
@@ -730,16 +731,16 @@ aside {
 .network-info {
     border-bottom: 1px solid rgb(0 0 0 / 10%);
 
-    .network-name {
+    h3 {
         color: var(--app-gray-dark);
         font-size: 18px;
-        font-weight: 400;
+        font-weight: 600;
         padding: 0px 15px 5px 15px;
     }
 
-    .network-position {
+    h2 {
         color: var(--app-gray-medium);
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 500;
         padding: 0px 15px 10px 15px;
     }
