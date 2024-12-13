@@ -1,0 +1,18 @@
+{
+  "name": "networkly",
+  "version": "1.0.0",
+  "description": "This project was developed for Program Developer students, focusing on tools like Git and GitHub while working remotely. This web application was designed for a fictional delivery company called 'Global Shipping', and includes features such as a geolocalization (Geolocation and MapBox APIs), modal dialogs, and responsive design. Below are the details of the project's structure and functionality.",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [
+    "Networkly",
+    "Social platform"
+  ],
+  "author": "Lateef Adeyekun",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
