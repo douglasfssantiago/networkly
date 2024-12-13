@@ -163,65 +163,6 @@ p.nav-item {
     }
 }
 
-    /*--------------------------------------*/
-    /*           Dropdown menu              */
-    /*--------------------------------------*/
-
-    .dropdown {
-        position: relative;
-        z-index: 1;
-        display: inline-block;
-    }
-
-    .dropdown-btn {
-        background-color: transparent;
-        color: var(--app-white);
-        font-size: 25px;
-        border: none;
-        width: 40px;
-        height: 60px;
-        cursor: pointer;
-        padding: 0px;
-    }
-    
-    .dropdown-btn:hover{
-        color: var(--app-light-blue);
-        background-color: transparent;
-    }
-
-    .dropdown-btn i {
-        pointer-events: none; 
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: var(--app-footer-socials-color);
-        min-width: 160px;
-        z-index: 2;
-        border-radius: 5px;
-        left: -120px;
-    }
-
-    .dropdown-content a {
-        color: var(--app-white);
-        font-size: 16px;
-        font-weight: 600;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;   
-    }
-
-    .dropdown-content a:hover {
-        color: var(--app-light-blue);
-    }
-    
-    .show {
-        display: block;
-    }
-
-
-
 /*--------------------------------------*/
 /*                Footer                */
 /*--------------------------------------*/
@@ -373,7 +314,7 @@ footer {
 }
 
 .right-section {
-    background: url('../img/login2.jpg') no-repeat center center/cover;
+    background: url('../img/login.jpg') no-repeat center center/cover;
     position: relative;
     flex: 1;
     height: 100%;
