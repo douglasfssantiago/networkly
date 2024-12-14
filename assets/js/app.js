@@ -1,11 +1,10 @@
 'use strict';
 
-import { select, selectById, listen, create } from "./utils.js";
+import { select, listen, create } from "./utils.js";
 
-const loginBtn = select('.login-btn');
-const usersContainer = select('.users');
-const errorMessage = selectById('error-message');
+
 const API_URL = 'https://randomuser.me/api/?nat=CA&results=10&seed=same';
+const usersContainer = select('.users');
 const options = {
     method: 'GET',
     mode: 'cors',
@@ -13,6 +12,10 @@ const options = {
         'Content-Type': 'application/json; charset=UTF-8'
     }
 }
+
+listen('load', window, () => { 
+    getUsers();
+});
 
 async function getUsers() {
   try {
@@ -32,29 +35,7 @@ async function getUsers() {
   }
 }
 
-function handleLogin() {
-    const username = selectById('username').value;
-    const password = selectById('password').value;
-
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
-
-    if (username === storedUsername && password === storedPassword) {
-        window.location.href = 'home.html';
-    } else {
-        errorMessage.textContent = 'Incorrect username or password';
-        errorMessage.style.visibility = 'visible';
-    }
-}
-
-function isAvailable() {
-   return  localStorage.length > 0 
-        && 'username' in localStorage 
-        && 'password' in localStorage
-}
-
 function loadUsers(users) {
-    //console.log(users);
     if (users.length > 0) {
         for (const user of users) {
             loadUser(user);
@@ -87,22 +68,4 @@ function loadUser(user) {
 
         usersContainer.appendChild(userDiv);
     }
-
 }
-
-listen('load', window, () => { 
-    console.log(isAvailable());
-    if (!isAvailable()) {
-        localStorage.setItem('username', 'johnsmith');
-        localStorage.setItem('password', '123456');
-    }
-    getUsers();
-});
-
-listen('click', loginBtn, handleLogin);
-
-listen('keydown', window, (event) => {
-    if (event.key === 'Enter') {
-        handleLogin();
-    }
-});
