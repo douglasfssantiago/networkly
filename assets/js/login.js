@@ -10,7 +10,6 @@ listen('load', window, () => {
         localStorage.setItem('username', 'johnsmith');
         localStorage.setItem('password', '123456');
     }
-    getUsers();
 });
 
 listen('click', loginBtn, handleLogin);
