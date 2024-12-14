@@ -194,11 +194,16 @@ p.nav-item {
         border: 1px solid var(--app-gray-2);
         border-radius: 5px;
         height: 40px;
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 15px;
     }
+
     input::placeholder{
         font-size: 15px;
+    }
+
+    label {
+        font-size: 16px;
     }
 }
 
@@ -280,8 +285,8 @@ main section {
         background-color: var(--app-white);
         padding: 20px 30px 20px 30px;
     }
-    .prepost-up, .prepost-down, .post, .post-item {
-        box-shadow: 1px 1px 2px var(--app-gray-2);
+    .post, .post-item {
+        box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
         background-color: var(--app-white);
         padding: 30px;
     }
@@ -295,7 +300,6 @@ main section {
     }
 
     .prepost-up {
-        border-bottom: 1px solid var(--app-gray-2);
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
 
@@ -312,6 +316,7 @@ main section {
     }
 
     .prepost-down {
+		border-top: 1px solid var(--app-gray-2);													  
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
     }
