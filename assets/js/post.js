@@ -6,7 +6,8 @@ const inputObj = select('.source');
 const postObj = select('.post-btn'); 
 const postsNewObj = select('.post-new');
 const fileInputObj = selectById('fileInput');
-const fileNameObj = select('.file-name');
+const fileStatusObj = select('.file-status');
+const uploadObj = document.getElementById('upload');
 let postId = 1;
 
 listen('change', fileInputObj, function (event) {
@@ -17,6 +18,10 @@ listen('change', fileInputObj, function (event) {
 listen('click', postObj, function () {
     const file = fileInputObj.files[0];
     createPost(inputObj.value, file);
+});
+
+listen('click', uploadObj, function() {
+    fileInputObj.click();
 });
 
 function createPost(input, file) {
@@ -43,10 +48,10 @@ function createPost(input, file) {
     postImageProfile.innerHTML = '<img class="post-photo" src="./assets/img/profile.jpg">';
 
     postIdentity.classList.add('post-identity');
-    postIdentity.innerHTML = `<p class="post-name">John Smith</p><p>Software Developer</p>`;
+    postIdentity.innerHTML = `<p class="post-name">John Smith</p><p class="post-second">UI/UX Designer</p>`;
 
     postOptions.classList.add('post-options');
-    postOptions.innerHTML = '<i class="post-ellipsis fa-solid fa-ellipsis"></i><p>1s ago</p>';
+    postOptions.innerHTML = '<i class="post-ellipsis fa-solid fa-ellipsis"></i><p class="post-second">1s ago</p>';
 
     postText.classList.add('post-text');
     postText.classList.add('flex');
@@ -66,7 +71,7 @@ function createPost(input, file) {
         const reader = new FileReader();
         reader.onload = function () {
             postImage.style.backgroundImage = `url('${reader.result}')`;
-            postImage.style.height = '616px'; 
+            postImage.style.height = '500px'; 
         };
         reader.readAsDataURL(file);
     }
@@ -88,7 +93,7 @@ function createPost(input, file) {
 
     inputObj.value = '';
     fileInput.value = '';
-    fileNameObj.innerText = '';
+    fileStatusObj.innerText = '';
     
     postsNewObj.prepend(postItem);
 }
@@ -98,8 +103,8 @@ function getPostIdentifier() {
 }
 
 function uploadImage(file) {
-    console.log("file", file);
     if (file) {
-        fileNameObj.innerText = `File: ${file.name}`;
+        postObj.title = file.name;
+        fileStatusObj.innerText = "1 file to post";
     }
 }

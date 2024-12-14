@@ -272,6 +272,11 @@ main section {
     margin-bottom: 40px;
     width: 100%;  
 
+	.prepost-up, .prepost-down {
+        box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+        background-color: var(--app-white);
+        padding: 20px 30px 20px 30px;
+    }
     .prepost-up, .prepost-down, .post, .post-item {
         box-shadow: 1px 1px 2px var(--app-gray-2);
         background-color: var(--app-white);
@@ -281,7 +286,7 @@ main section {
     .prepost-up, .prepost-down {
         .col {
             width: 100%;
-            height: 50px;
+            height: 40px;
             font-size: 18px;
         }
     }
@@ -335,6 +340,8 @@ main section {
         .post-image {
             margin-top: 20px;
             width: 100%;        
+			background-size: cover;
+            background-repeat: no-repeat;   														  
         }      
         
         .post-likes {
@@ -371,10 +378,13 @@ main section {
     p.col {
         color: var(--app-gray-3);
         flex: 1;
-        line-height: 50px;
+        line-height: 40px;
+		font-size: 14px !important;								   
 
         i {
             padding-right: 2px;
+			font-size: 18px;
+            cursor: pointer;
         }
     }
     p.col.prepost-icon-share {
@@ -385,7 +395,7 @@ main section {
 }
 
 .prepost-icon, .prepost-icon-share {
-    width: 50px;
+    width: 40px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -404,7 +414,7 @@ main section {
 }
 
 .prepost-name {
-    width: calc(100% - 50px);
+    width: calc(100% - 40px);
     height: 100%;
     display: flex;
     justify-content: left;
@@ -440,7 +450,7 @@ main section {
 }
 
 .post-second {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 .post-options {
@@ -458,16 +468,21 @@ main section {
 
 .post-btn {
     cursor: pointer;
-							
+	font-size: 23px !important;
 }
 
 .post-new .post-item {
     display: none;
 }
+
+.file-status {
+    margin-right: 10px;
+    font-size: 10px !important;
+}
+
 /*-------------------------------------*/
 /*            Profile - left           */
 /*-------------------------------------*/
-
 
 .col-0 {
     flex: wrap;
