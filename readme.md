@@ -10,7 +10,6 @@ You can see the live demo of the project [here](https://douglasfssantiago.github
 ## 📑Table of Contents
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Folder Structure](#project-structure)
 - [Features](#features)
 
 ## 🖥️Technologies Used
@@ -29,30 +28,6 @@ To run this project locally, follow these steps:
     cd networkly
     ```
 3. Open `index.html` in your browser to view the application.
-
-
-## Folder Structure
-├── assets
-│   ├── css
-│   │   └── style.css
-│   ├── img
-│   │   ├── favicon.png
-│   │   ├── login.jpg
-│   │   ├── andrea-parker.jpg
-│   │   ├── madrid.jpg
-│   │   ├── readme1.png.jpg
-│   │   ├── logo.png
-│   │   ├── search.png
-│   │   ├── readme2.png
-│   │   └── profile.jpg
-│   ├── js
-│   │   ├── app.js
-│   │   ├── post.js
-│   │   └── utils.js
-├── index.html
-├── home.html
-└── README.md
-
 
 ![](./assets/img/readme2.png)
 
