@@ -189,22 +189,67 @@ p.nav-item {
     font-size: 20px;
     font-weight: 500;
     color: var(--app-blue-3);
-    
-    input {
+    position: relative;
+   
+    input[type='text'] {
         border: 1px solid var(--app-gray-2);
         border-radius: 5px;
         height: 40px;
         font-size: 16px;
-        padding-left: 15px;
+        padding: 0 15px 0 35px;
+        background: #fff url(../img/user.png) no-repeat 10px 10px;
+        background-size: 16px;        
+        width: 285px;
+        outline: none;
+        box-sizing: border-box;
+        transition: border-color 0.3s;  
     }
-
-    input::placeholder{
-        font-size: 15px;
-    }
-
-    label {
+        
+    input[type='password'] {
+        border: 1px solid var(--app-gray-2);
+        border-radius: 5px;
+        height: 40px;
         font-size: 16px;
+        padding: 0 15px 0 35px;
+        background: #fff url(../img/password.png) no-repeat 10px 10px;
+        background-size: 16px;    
+        width: 285px;
+        outline: none;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
     }
+
+    input:focus {
+        border-color: #0073b1;
+    }
+
+    input::placeholder {
+        color: transparent;
+        transition: color 0.2s;
+    }
+
+    .floating-label {
+        position: absolute;
+        top: 50%;
+        left: 35px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #aaa;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    input:focus + .floating-label,
+    input:not(:placeholder-shown) + .floating-label {
+        top: -10px;
+        left: 0;
+        font-size: 12px;
+        color: #0073b1;
+    }
+}
+
+.form-group:nth-of-type(2) {
+    margin-top: 30px;
 }
 
 .error-message {
