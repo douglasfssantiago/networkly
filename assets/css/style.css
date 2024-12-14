@@ -11,8 +11,8 @@
     --app-blue-3: #003778;
     --app-gray-1: #f9f9f9;
     --app-gray-2: rgb(0 0 0 / 10%);
-    --app-gray-3: #808080;  
-    --app-gray-4: #2f2e2e;  
+    --app-gray-3: #808080;
+    --app-gray-4: #2f2e2e;
     --app-red: #ff0000;
 }
 
@@ -136,6 +136,7 @@ p.nav-item {
 
 .profile {
     place-items: center;
+    margin-right: 20px;
 
     img {
         width: 40px;
@@ -176,7 +177,7 @@ p.nav-item {
         font-size: 17px;
         font-weight: 500;
     }
-    
+
     h1 {
         font-size: 35px;
         font-family: "Exo 2", sans-serif;
@@ -190,7 +191,7 @@ p.nav-item {
     font-weight: 500;
     color: var(--app-blue-3);
     position: relative;
-   
+
     input[type='text'] {
         border: 1px solid var(--app-gray-2);
         border-radius: 5px;
@@ -198,13 +199,13 @@ p.nav-item {
         font-size: 16px;
         padding: 0 15px 0 35px;
         background: #fff url(../img/user.png) no-repeat 10px 10px;
-        background-size: 16px;        
+        background-size: 16px;
         width: 285px;
         outline: none;
         box-sizing: border-box;
-        transition: border-color 0.3s;  
+        transition: border-color 0.3s;
     }
-        
+
     input[type='password'] {
         border: 1px solid var(--app-gray-2);
         border-radius: 5px;
@@ -212,7 +213,7 @@ p.nav-item {
         font-size: 16px;
         padding: 0 15px 0 35px;
         background: #fff url(../img/password.png) no-repeat 10px 10px;
-        background-size: 16px;    
+        background-size: 16px;
         width: 285px;
         outline: none;
         box-sizing: border-box;
@@ -255,14 +256,14 @@ p.nav-item {
 .error-message {
     color: var(--app-red);
     font-size: 15px;
-    min-height: 20px; 
+    min-height: 20px;
     margin-top:5px;
     visibility: hidden;
 }
 
 .right-section {
     background: url('../img/login.jpg') no-repeat center center/cover;
-    width: 35vw; 
+    width: 35vw;
     height: 35vw;
     border-radius: 50%;
     overflow: hidden;
@@ -323,7 +324,7 @@ p.nav-item {
 main section {
     margin-top: 40px;
     margin-bottom: 40px;
-    width: 100%;  
+    width: 100%;
 
 	.prepost-up, .prepost-down {
         box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
@@ -356,12 +357,12 @@ main section {
             margin: 10px 0;
             display: block;
             border-radius: 5px;
-            box-sizing: border-box;            
+            box-sizing: border-box;
         }
     }
 
     .prepost-down {
-		border-top: 1px solid var(--app-gray-2);													  
+		border-top: 1px solid var(--app-gray-2);
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
     }
@@ -383,20 +384,20 @@ main section {
         .post-text {
             margin-top: 20px;
             width: 100%;
-            
+
             .message {
                 color: var(--app-gray-4);
                 font-size: 20px;
             }
         }
-        
+
         .post-image {
             margin-top: 20px;
-            width: 100%;        
+            width: 100%;
 			background-size: cover;
-            background-repeat: no-repeat;   														  
-        }      
-        
+            background-repeat: no-repeat;
+        }
+
         .post-likes {
             margin-top: 15px;
             width: 100%;
@@ -407,11 +408,11 @@ main section {
 
             label {
                 padding-left: 10px;
-                padding-right: 20px;							   
+                padding-right: 20px;
                 font-size: 16px;
                 color: var(--app-gray-3);
             }
-            
+
             .heart {
                 color: #ff0000;
             }
@@ -419,7 +420,7 @@ main section {
             .comment, .share {
                 color: var(--app-gray-3);
             }
-        }          
+        }
     }
 }
 
@@ -432,7 +433,7 @@ main section {
         color: var(--app-gray-3);
         flex: 1;
         line-height: 40px;
-		font-size: 14px !important;								   
+		font-size: 14px !important;
 
         i {
             padding-right: 2px;
@@ -457,7 +458,7 @@ main section {
 
 .prepost-icon {
     justify-content: left;
-	cursor: pointer;			
+	cursor: pointer;
 }
 
 .prepost-icon-share {
@@ -491,7 +492,7 @@ main section {
     width: calc(100% - 200px);
     padding-left: 20px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
@@ -507,9 +508,9 @@ main section {
 }
 
 .post-options {
-    width: 100px;  
+    width: 100px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: flex-end;
 }
@@ -562,7 +563,7 @@ aside {
         box-shadow: 1px 1px 2px var(--app-gray-2);
         border-radius: 5px;
         background-color: var(--app-white);
-    
+
         .details {
             padding: 35px 25px 25px;
             width: 100%;
@@ -635,7 +636,7 @@ aside {
                 text-transform: uppercase;
             }
         }
-        
+
         .heading {
             padding: 35px 25px 25px;
             border-bottom: 1px solid var(--app-gray-2);
@@ -645,7 +646,7 @@ aside {
                 font-weight: 500;
                 text-align: center;
             }
-        }        
+        }
     }
 }
 
@@ -719,7 +720,7 @@ footer {
     }
 
     p {
-      line-height: 50px;  
+      line-height: 50px;
     }
 
     .fa-brands, .fa-envelope {
@@ -727,7 +728,7 @@ footer {
         font-size: 20px;
         transition: transform 0.2s ease, background-color 0.2s ease;
     }
-    
+
     .fa-brands:hover, .fa-envelope:hover {
         transform: scale(1.15);
     }
@@ -744,17 +745,17 @@ footer {
 
     div .menu {
         display: flex;
-        gap: 20px; 
+        gap: 20px;
         align-items: center;
     }
 }
 
 @media screen and (max-width: 921px) {
-    div .menu { 
+    div .menu {
         display: none;
     }
 
-    div .dropdown { 
+    div .dropdown {
         display: inline-block;
     }
 
@@ -765,15 +766,15 @@ footer {
 
 @media screen and (max-width: 768px) {
     footer .container {
-        display: flex; 
+        display: flex;
         flex-direction: column;
-        align-items: center; 
-        text-align: center; 
+        align-items: center;
+        text-align: center;
     }
 
     .socials ul {
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -784,7 +785,7 @@ footer {
     }
 
     .copyright {
-        display: none; 
+        display: none;
         margin-top: 15px;
     }
 }
